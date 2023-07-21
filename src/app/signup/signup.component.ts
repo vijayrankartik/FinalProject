@@ -8,7 +8,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
-export class SignupComponent implements OnInit, OnDestroy {
+export class SignupComponent {
 
   isLoading = false;
   authStatusSub: Subscription;
@@ -18,11 +18,6 @@ export class SignupComponent implements OnInit, OnDestroy {
 
   onSignup(form: NgForm) {
     console.log(form.value)
-  }
-
-  ngOnInit(): void {
-  }
-  ngOnDestroy(): void {
   }
 
 }

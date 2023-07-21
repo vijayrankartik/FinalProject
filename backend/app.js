@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const path = require("path");
 
 const postsRoute = require("./Routes/posts");
+const usersRoute = require("./Routes/users")
 
 const app = express();
 
@@ -38,5 +39,5 @@ mongoose
   });
 
 app.use("/api/posts", postsRoute);
-
+app.use("/api/users", usersRoute)
 module.exports = app;
